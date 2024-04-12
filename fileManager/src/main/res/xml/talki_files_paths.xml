@@ -20,4 +20,6 @@
     <external-files-path
         name="talki_external_files_file"
         path="." />
+    <root-path path="." name="talki_root_file" />
+
 </paths>
