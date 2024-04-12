@@ -1,11 +1,10 @@
-package com.example.easytutofilemanager;
+package com.ohuang.filemanager;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -33,7 +32,7 @@ public class FileListActivity extends AppCompatActivity {
         noFilesText.setVisibility(View.INVISIBLE);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(new MyAdapter(getApplicationContext(),filesAndFolders));
+        recyclerView.setAdapter(new MyAdapter(this,filesAndFolders));
 
 
 

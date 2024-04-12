@@ -1,2 +1,4 @@
 rootProject.name = "EasyTutoFileManager"
 include ':app'
+
+include ':fileManager'

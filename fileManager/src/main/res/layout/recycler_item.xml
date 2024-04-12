@@ -10,7 +10,7 @@
     <ImageView
         android:layout_width="36dp"
         android:layout_height="36dp"
-        tools:src="@drawable/ic_baseline_folder_24"
+
         android:id="@+id/icon_view"/>
 
     <TextView
@@ -19,7 +19,7 @@
         android:id="@+id/file_name_text_view"
         android:layout_toEndOf="@id/icon_view"
         android:padding="10dp"
-        android:textColor="@color/black"
+        android:textColor="#FF000000"
         tools:text="Documents"/>
 
    <LinearLayout

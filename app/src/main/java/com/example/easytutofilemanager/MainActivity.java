@@ -13,8 +13,10 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.google.android.material.button.MaterialButton;
+import com.ohuang.filemanager.FileListActivity;
+import com.ohuang.filemanager.FileManager;
 
-import java.io.File;
+import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,21 +26,33 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         MaterialButton storageBtn = findViewById(R.id.storage_btn);
+        MaterialButton local_btn = findViewById(R.id.local_btn);
+        try {
+            FileUtils.writeText(getFilesDir()+"/time.txt",""+System.currentTimeMillis());
+        } catch (IOException e) {
+
+        }
 
         storageBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(checkPermission()){
                     //permission allowed
-                    Intent intent = new Intent(MainActivity.this, FileListActivity.class);
+
                     String path = Environment.getExternalStorageDirectory().getPath();
-                    intent.putExtra("path",path);
-                    startActivity(intent);
+                    FileManager.jump(MainActivity.this,path);
                 }else{
                     //permission not allowed
                     requestPermission();
 
                 }
+            }
+        });
+        local_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FileManager.jump(MainActivity.this);
+
             }
         });
 

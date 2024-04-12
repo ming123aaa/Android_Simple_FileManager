@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingDefaultResource">
+    <external-path
+        name="talki_external_root"
+        path="." />
+    <external-path
+        name="talki_external_download"
+        path="Download" />
+    <files-path
+        name="talki_files_file"
+        path="." />
+    <cache-path
+        name="talki_cache_file"
+        path="." />
+    <external-cache-path
+        name="talki_external_cache_file"
+        path="." />
+    <external-files-path
+        name="talki_external_files_file"
+        path="." />
+</paths>
