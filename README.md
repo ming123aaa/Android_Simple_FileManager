@@ -20,3 +20,16 @@ app private directory
 ```java
  FileManager.jump(MainActivity.this);
 ```
+
+```kotlin
+	repositories {
+			mavenCentral()
+			maven { url = uri("https://jitpack.io") }
+		}
+
+   	dependencies {
+	        implementation("com.github.ming123aaa:Android_Simple_FileManager:1.1.1")
+	}       
+
+
+```          
